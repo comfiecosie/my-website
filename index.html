@@ -3,114 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Simple Website</title>
+  <title>Streetwear Brand – Official Store</title>
   <style>
+    :root {
+      --pink: #f6c1cc;
+      --light-gray: #e5e7eb;
+      --dark-gray: #1f2933;
+      --sage: #b7c9b4;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: var(--light-gray);
+      color: var(--dark-gray);
     }
 
     header {
-      background: #1e293b;
-      color: white;
-      padding: 2rem;
+      padding: 4rem 1.5rem;
       text-align: center;
+      background: linear-gradient(135deg, var(--sage), var(--pink));
     }
 
-    nav {
-      background: #0f172a;
-      padding: 0.75rem;
-      text-align: center;
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
     }
 
-    nav a {
-      color: #e5e7eb;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+    header p {
+      max-width: 600px;
+      margin: auto;
     }
 
     main {
-      max-width: 900px;
-      margin: 2rem auto;
+      max-width: 1100px;
+      margin: 3rem auto;
       padding: 1.5rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    section {
-      margin-bottom: 2rem;
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--sage);
+      color: #0f172a;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 1.2rem 0;
+    }
+
+    button {
+      background: var(--dark-gray);
+      color: white;
+      border: none;
+      padding: 1rem 2.2rem;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      border-radius: 999px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background: var(--pink);
+      color: #0f172a;
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #1e293b;
-      color: white;
+      padding: 2rem 1rem;
+      background: var(--dark-gray);
+      color: var(--light-gray);
+      font-size: 0.85rem;
     }
 
-    button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    button:hover {
-      background: #1d4ed8;
+    @media (max-width: 900px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>A clean, simple starter site</p>
+    <h1>YOUR BRAND</h1>
+    <p>Custom-designed streetwear. Soft tones. Strong identity.</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
-    <section id="about">
-      <h2>About Me</h2>
+
+    <section class="card product">
+      <div>
+        <span class="tag">LIMITED DROP</span>
+        <h2>Signature Hoodie & Sweatpants Set</h2>
+        <p>
+          Custom-designed streetwear made with intention. Clean silhouettes,
+          premium comfort, and muted tones that stand out without shouting.
+        </p>
+        <ul>
+          <li>Heavyweight fabric</li>
+          <li>Relaxed streetwear fit</li>
+          <li>Original custom designs</li>
+          <li>Limited quantities</li>
+        </ul>
+        <div class="price">$89.99</div>
+        <button onclick="alert('Checkout coming soon')">Buy Now</button>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/600x450" alt="Streetwear hoodie and sweatpants" />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>About the Brand</h2>
       <p>
-        This is a simple website built with just HTML and CSS. You can use it as
-        a personal page, school project, or starting point for something bigger.
+        Designed independently with a focus on quality, comfort, and aesthetic.
+        Every piece is made to feel intentional — from color to fit.
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Project One</li>
-        <li>Project Two</li>
-        <li>Project Three</li>
-      </ul>
+    <section class="card">
+      <h2>FAQ</h2>
+      <p><strong>Are these limited?</strong><br>Yes — once a drop sells out, it’s gone.</p>
+      <p><strong>Fit?</strong><br>True to size with a relaxed streetwear cut.</p>
+      <p><strong>Shipping?</strong><br>3–5 business days.</p>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: youremail@example.com</p>
-      <button onclick="alert('Thanks for visiting!')">Say Hi</button>
-    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 My Website</p>
+    <p>&copy; 2026 YOUR BRAND. All rights reserved.</p>
   </footer>
 
 </body>
