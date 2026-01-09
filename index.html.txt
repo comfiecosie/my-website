@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfie Cosie - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Comfie Cosie</h1>
+    <p>Custom-designed streetwear. Soft tones. Strong identity.</p>
+    <a href="shop.html" class="button">Shop Now</a>
+  </header>
+
+  <main>
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-cards">
+        <!-- Hoodie Card -->
+        <div class="product-card">
+          <img src="images/hoodie.jpg" alt="Signature Hoodie">
+          <h3>Signature Hoodie</h3>
+          <p>$55.00</p>
+          <a href="shop.html#hoodie" class="button">Buy Now</a>
+        </div>
+        <!-- Sweatpants Card -->
+        <div class="product-card">
+          <img src="images/sweatpants.jpg" alt="Signature Sweatpants">
+          <h3>Signature Sweatpants</h3>
+          <p>$35.00</p>
+          <a href="shop.html#pants" class="button">Buy Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Comfie Cosie. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

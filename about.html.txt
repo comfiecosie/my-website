@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comfie Cosie - About</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+</nav>
+<header>
+<h1>About Comfie Cosie</h1>
+</header>
+<main>
+<section class="content">
+<p><strong>Comfie Cosie</strong> is a custom-designed streetwear brand focused on comfort, minimalism, and intentional design.</p>
+<p>Every hoodie and pair of sweatpants is designed with soft tones, clean silhouettes, and premium comfort in mind.</p>
+<p>We believe streetwear doesn’t have to be loud to be bold.</p>
+</section>
+</main>
+<footer>
+<p>&copy; 2026 Comfie Cosie. All rights reserved.</p>
+</footer>
+</body>
+</html>

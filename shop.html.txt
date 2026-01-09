@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfie Cosie - Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Shop Comfie Cosie</h1>
+    <p>Select your sizes and quantities.</p>
+  </header>
+
+  <main>
+    <!-- Hoodie Section -->
+    <section id="hoodie" class="product-section">
+      <h2>Signature Hoodie</h2>
+      <img src="images/hoodie.jpg" alt="Signature Hoodie">
+      <p>$55.00</p>
+      <label for="hoodie-size">Size:</label>
+      <select id="hoodie-size">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <label for="hoodie-qty">Qty:</label>
+      <input type="number" id="hoodie-qty" min="1" value="1">
+      <div class="price" id="hoodie-price">$55.00</div>
+      <button onclick="buyHoodie()">Buy Hoodie</button>
+    </section>
+
+    <!-- Sweatpants Section -->
+    <section id="pants" class="product-section">
+      <h2>Signature Sweatpants</h2>
+      <img src="images/sweatpants.jpg" alt="Signature Sweatpants">
+      <p>$35.00</p>
+      <label for="pants-size">Size:</label>
+      <select id="pants-size">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <label for="pants-qty">Qty:</label>
+      <input type="number" id="pants-qty" min="1" value="1">
+      <div class="price" id="pants-price">$35.00</div>
+      <button onclick="buyPants()">Buy Sweatpants</button>
+    </section>
+
+  <footer>
+    <p>&copy; 2026 Comfie Cosie. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hoodiePrice = 55;
+    const pantsPrice = 35;
+
+    const hoodieQty = document.getElementById('hoodie-qty');
+    const hoodiePriceDiv = document.getElementById('hoodie-price');
+    hoodieQty.addEventListener('input', () => {
+      const total = hoodieQty.value * hoodiePrice;
+      hoodiePriceDiv.textContent = `$${total.toFixed(2)}`;
+    });
+
+    const pantsQty = document.getElementById('pants-qty');
+    const pantsPriceDiv = document.getElementById('pants-price');
+    pantsQty.addEventListener('input', () => {
+      const total = pantsQty.value * pantsPrice;
+      pantsPriceDiv.textContent = `$${total.toFixed(2)}`;
+    });
+
+    function buyHoodie() {
+      const size = document.getElementById('hoodie-size').value;
+      const qty = document.getElementById('hoodie-qty').value;
+      const total = qty * hoodiePrice;
+      alert(`You are buying ${qty} hoodie(s) of size ${size} for $${total.toFixed(2)}.`);
+    }
+
+    function buyPants() {
+      const size = document.getElementById('pants-size').value;
+      const qty = document.getElementById('pants-qty').value;
+      const total = qty * pantsPrice;
+      alert(`You are buying ${qty} sweatpants of size ${size} for $${total.toFixed(2)}.`);
+    }
+  </script>
+</body>
+</html>
