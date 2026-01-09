@@ -25,7 +25,7 @@
     <!-- Hoodie Section -->
     <section id="hoodie" class="product-section">
       <h2>Signature Hoodie</h2>
-      <img src="images/hoodie.jpg" alt="Signature Hoodie">
+      <img src="images/hoodie.jpg /* replace with your real hoodie image */" alt="Signature Hoodie">
       <p>$55.00</p>
       <label for="hoodie-size">Size:</label>
       <select id="hoodie-size">
@@ -43,7 +43,7 @@
     <!-- Sweatpants Section -->
     <section id="pants" class="product-section">
       <h2>Signature Sweatpants</h2>
-      <img src="images/sweatpants.jpg" alt="Signature Sweatpants">
+      <img src="images/sweatpants.jpg /* replace with your real sweatpants image */" alt="Signature Sweatpants">
       <p>$35.00</p>
       <label for="pants-size">Size:</label>
       <select id="pants-size">
@@ -81,17 +81,19 @@
     });
 
     function buyHoodie() {
-      const size = document.getElementById('hoodie-size').value;
-      const qty = document.getElementById('hoodie-qty').value;
-      const total = qty * hoodiePrice;
-      alert(`You are buying ${qty} hoodie(s) of size ${size} for $${total.toFixed(2)}.`);
+  const size = document.getElementById('hoodie-size').value;
+  const qty = document.getElementById('hoodie-qty').value;
+  const url = `https://buy.stripe.com/REPLACE_HOODIE_LINK?quantity=${qty}&size=${size}`;
+  window.location.href = url;
+} hoodie(s) of size ${size} for $${total.toFixed(2)}.`);
     }
 
     function buyPants() {
-      const size = document.getElementById('pants-size').value;
-      const qty = document.getElementById('pants-qty').value;
-      const total = qty * pantsPrice;
-      alert(`You are buying ${qty} sweatpants of size ${size} for $${total.toFixed(2)}.`);
+  const size = document.getElementById('pants-size').value;
+  const qty = document.getElementById('pants-qty').value;
+  const url = `https://buy.stripe.com/REPLACE_PANTS_LINK?quantity=${qty}&size=${size}`;
+  window.location.href = url;
+} sweatpants of size ${size} for $${total.toFixed(2)}.`);
     }
   </script>
 </body>
